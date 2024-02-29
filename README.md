@@ -1,1 +1,1 @@
-# FreeLancer-SImulator
+# FreeLancer-Simulator
