@@ -1,3 +1,4 @@
+package FreeLancerSimulator;
 public class Player {
     public int bit_coins;
     public int exp;
