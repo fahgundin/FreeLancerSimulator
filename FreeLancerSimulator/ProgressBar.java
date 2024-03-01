@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class ProgressBar extends Frame{
     public JProgressBar barra = new JProgressBar();
-    public ProgressBar(JPanel panel,int x,int y, int val_max,JButton button,int value){ // o painel, a posicao da barra e o valor 100% dela
+    public ProgressBar(JPanel panel,int x,int y, int val_max,JButton button){ // o painel, a posicao da barra e o valor 100% dela
         
         this.barra.setBounds(x,y, 70,20); // seta a posição da barra e as dimensões dela
         this.barra.setStringPainted(true); 
