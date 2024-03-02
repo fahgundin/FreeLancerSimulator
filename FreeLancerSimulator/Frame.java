@@ -6,9 +6,22 @@ public class Frame{
     public static int width; // largura do frame
     public static int height; // altura do frame
     static JFrame frame = new JFrame("FreeLancer Simulator"); 
+    static JTabbedPane tabs = new JTabbedPane();
 
+    public static void tabs(){
+        CreateWindow();
+        Loja.lojaPanel();
+        tabs.setBounds(0,0,width,height);
+        tabs.addTab("Inicio", Game.panel );
+        tabs.addTab("Loja", Loja.ljpanel);
+        
+        frame.add(tabs);
+
+        
+
+    }
     
-    public static void CreateWindow(JPanel panel){ // simplesmente cirar a janela, nada demais
+    public static void CreateWindow(){ // simplesmente cirar a janela, nada demais
         
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
@@ -16,10 +29,11 @@ public class Frame{
         frame.setLayout(null);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
-        frame.add(panel);
         width = frame.getWidth();
         height = frame.getHeight();
+        
     }
+    
     
   
 

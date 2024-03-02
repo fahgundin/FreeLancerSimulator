@@ -17,4 +17,5 @@ public class ProgressBar extends Frame{
         new Load(barra, panel,button).start(); // executar o loading
         
     } 
+    
 }
