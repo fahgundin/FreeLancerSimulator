@@ -9,13 +9,13 @@ public class Frame{
     static JTabbedPane tabs = new JTabbedPane();
 
     public static void tabs(){
+        frame.add(tabs);
         CreateWindow();
-        Loja.lojaPanel();
-        tabs.setBounds(0,0,width,height);
+        tabs.setBounds(0,0,505,550);
         tabs.addTab("Inicio", Game.panel );
         tabs.addTab("Loja", Loja.ljpanel);
+        Loja.lojaPanel();
         
-        frame.add(tabs);
 
         
 

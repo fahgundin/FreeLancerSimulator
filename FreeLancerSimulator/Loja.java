@@ -1,29 +1,31 @@
 package FreeLancerSimulator;
 
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.LayoutManager;
 
 import javax.swing.JButton;
 import javax.swing.JPanel;
-import javax.swing.JScrollBar;
+
 import javax.swing.JScrollPane;
-import javax.swing.JFrame;
+import javax.swing.JTextArea;
+
 
 public class Loja extends Frame{
     
     static JPanel ljpanel = new JPanel();
     public static void lojaPanel(){
         
-        ljpanel.setSize(320, 780);
-        ljpanel.setLayout(null); 
+        ljpanel.setLayout(new FlowLayout());
         ljpanel.setBackground(Color.GRAY);
         ljpanel.setVisible(true);
-        JScrollBar scroll = new JScrollBar();
-        JButton button = new JButton("teste");
-        button.setBounds(0,0,20,20);
-        ljpanel.add(button);
-        scroll.setBounds(285,0,20, 380);
-        ljpanel.add(scroll);
-        
+        JPanel panel = new JPanel();
+        panel.setPreferredSize(new Dimension(500,700));
+        JScrollPane pane = new JScrollPane(panel,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        pane.setPreferredSize(new Dimension(490,500));
+        ljpanel.add(pane);
+
         
     }
     
